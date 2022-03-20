@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+var canvas;
+var ctx;
+var mycolor="#e8596d";
+var z=10, c=10;
+
+function init(){
+	canvas=document.getElementById('canvas');
+	ctx=canvas.getContext('2d');
+	document.addEventListener("mousedown",showXY);
+	ctx.fillStyle=mycolor;
+	ctx.strokeRect(0,0,700,400);
+	
+	document.addEventListener("keydown", color_iv);
+	document.addEventListener("keydown", razmer);
+	}
+
+function showXY(event) {
+	var x=event.offsetX;
+	var y=event.offsetY;
+	document.getElementById("x").value="x=" + x;
+	document.getElementById("y").value="y=" + y;
+	ctx.fillRect(x,y,z,c);
+}
+
+function color_iv(event) {
+	ctx.clearStyle=mycolor;
+	
+	if (event.keyCode == 49) {mycolor = "#e87d72";}
+	if (event.keyCode == 50) {mycolor = "#ea46dc";}
+	if (event.keyCode == 51) {mycolor = "#178e8e";}
+	
+	ctx.fillStyle=mycolor;
+}
+
+
+function clearCanvas(canvas,ctx){
+ event.preventDefault();
+  ctx.clearRect(0, 0, 700, 400);
+  ctx.strokeRect(0,0,700,400);
+}
+</script>
+</head>
+
+<body onload="init();">
+<input type="text" id="x"></input>
+<input type="text" id="y"></input>
+<br>
+<canvas id="canvas" width="700" height="400"></canvas>
+<br>
+<input type="button" value="Очистка поля для рисования" id="clearbutton" onclick="clearCanvas(canvas,ctx);">
+<br>
+<p>Нажмите на 1-цвет изменится на <font color="#e87d72">Salmon</font>, нажмите на 2 цвет изменится на <font color="#ea46dc">Purple Pizzazz</font>, нажмите на 3 цвет изменится на <font color="#178e8e">Blue Chill</font></p>
+</body>
+</html>

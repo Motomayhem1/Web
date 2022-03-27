@@ -1,0 +1,39 @@
+<html>
+
+ <head>
+  <script type="text/javascript">
+  function checkEmpty(field){
+	  if(field.value.length==0){
+		  alert("Поле не заполнено!");
+	  }
+  }
+  function isEmpty(field){
+	  return field.value.lenght==0;
+  }
+  function checkPhone(field){
+	  label=document.getElementById(field.id+"mes");
+	  if (isEmpty(field)) {
+		  label.innerHTML="Поле не заполнено!";
+		  document.getElementById("phone").style.backgroundColor="red";
+	  } else if (!isCorrectPhone(field)) {
+		  label.innerHTML="Некорректно веден телефон!";
+		  document.getElementById("phone").style.backgroundColor="red";
+	  } else {
+		  label.innerHTML="";
+		  document.getElementById("phone").style.backgroundColor="green";
+	  }
+  }
+  
+  function isCorrectPhone(field) {
+	  var emailRegex=/^8-\d{3}-\d{3}-\d{2}-\d{2}$/;
+	  return emailRegex.test(field.value);
+  }
+  
+  
+  </script>
+</head>
+<body>
+Телефон:<input type="text" id="phone" onkeyup="checkPhone(this)" onblur="checkEmpty(this)"/>
+<span id="phonemes"></span><br>
+</body>
+</html>

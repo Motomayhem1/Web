@@ -1,0 +1,17 @@
+<html>
+<body> Выберите начальную дату <input id="date1" type="date" ><br>Выберите конечную дату <input id="date2" type="date" >.
+<script>
+ 
+function my_day() {
+var start = new Date(document.getElementById('date1').value);
+var stop = new Date(document.getElementById('date2').value);
+var d = (stop - start);
+var c = d/(1000*60*60*24);
+  outer.innerHTML=c
+}
+</script>
+<br>
+<button value="клик" style="width:100px;height:20px " onclick="my_day()"> Click</button> <br>
+<b id="outer"></b>
+</body>
+</html>

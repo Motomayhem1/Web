@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<img id="img" onclick="changeImage()" src="bmw-m8.jpg" width="256"/>
+<br>
+<input id="imgname" type="text" value="bmw-m8.jpg"/>
+<script language="javascript">
+var i=0;
+var img=document.getElementById("img");
+var imgname=new Array('bmw-m8.jpg','bmw-m4.jpg', 'BMW-M5.jpg', 'bmw-x6.jpg', 'bmw-7.jpg');
+function changeImage() {
+	img.src=imgname[i];
+	document.getElementById("imgname").value=imgname[i];
+	i++;
+	if (i > imgname.length-1) {
+		i=0;
+	}
+} 
+</script>
+</body>
+</html>

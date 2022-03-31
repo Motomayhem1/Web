@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+var Happy=true;
+var pause = 1000;
+var timer;
+function changeImage() {
+	var imgname=Happy ? "Sad.jpg" : "Happy.jpg";
+	Happy=!Happy;
+	document.getElementById("img").src=imgname;
+} 
+function resetTimer(field) {
+	clearInterval(timer);
+	pause=field.value;
+}
+function startTimer() {
+	timer=setInterval('changeImage()', pause);
+}
+</script>
+</head>
+<body onload="timer=setInterval('changeImage()', 1000)">
+<img id="img" src="Happy.jpg" width="256"/>
+<br>
+<input type="number" id="pause" step="100" value="1000" onchange="resetTimer(this)">
+<br>
+<input type="button" value="Start" onclick="startTimer();"/>
+<input type="button" value="Stop" onclick="clearInterval(timer);"/>
+</body>
+</html>

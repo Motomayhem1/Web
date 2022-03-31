@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<script>
+			function changeColor(range){
+				var color = "rgb(" + range.value + ", 0, 0)";
+				document.getElementById("mycolor").style.backgroundColor=color;
+			}
+			
+		</script>
+	</head>
+	<body>
+	<input type ="range" min="0" max="255" value="255" oninput="changeColor(this)"/>
+	<input background=type="text" id="mycolor" value="Изменяемый цвет"/>
+	</body>
+</html>

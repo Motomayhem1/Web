@@ -1,0 +1,33 @@
+<html>
+ <head>
+  <script>
+    function showDescription(combo){
+	var descField = document.getElementById("description");
+	switch (combo.value){
+		case "A":descField.innerHTML="Мотоциклы";break;
+		case "B":descField.innerHTML="Легковые автомобили";break;
+		case "C":descField.innerHTML="Грузовые автомобили";break;
+		case "D":descField.innerHTML="Автобусы";break;
+		case "E":descField.innerHTML="Автомобили с прицепом";break;
+		case "M":descField.innerHTML="Мопеды";break;
+		case "Tm":descField.innerHTML="Трамваи";break;
+	    case "Td":descField.innerHTML="Тролейбусы";break;
+	}
+}
+</script>
+</head>
+<body>
+<select onchange="showDescription(this)">
+<option value="A">Категория A</option>
+<option value="B">Категория B</option>
+<option value="C">Категория C</option>
+<option value="D">Категория D</option>
+<option value="E">Категория E</option>
+<option value="M">Категория М</option>
+<option value="Tm">Категория Tm</option>
+<option value="Td">Категория Td</option>
+</select>
+<span><b>Описание:</b></span>
+<span id="description">Мотоциклы</span>
+</body>
+</html>

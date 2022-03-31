@@ -1,0 +1,149 @@
+<html>
+<head>
+<script>
+function draw() {
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext('2d');
+	
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#7bb5ff";
+    ctx.beginPath();
+    ctx.fillRect(0,0,300,300);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+ 
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#32b35e";
+    ctx.beginPath();
+    ctx.fillRect(0,250,300,300);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+	
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#897460";
+    ctx.beginPath();
+    ctx.fillRect(50,130,130,120);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+	
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#000000";
+    ctx.beginPath();
+    ctx.fillRect(95,160,43,43);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+	
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#bfe1fa";
+    ctx.beginPath();
+    ctx.fillRect(95,160,20,20);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#bfe1fa";
+    ctx.beginPath();
+    ctx.fillRect(118,160,20,20);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#bfe1fa";
+    ctx.beginPath();
+    ctx.fillRect(95,183,20,20);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#bfe1fa";
+    ctx.beginPath();
+    ctx.fillRect(118,183,20,20);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "#c25758";
+    ctx.moveTo(190, 130);
+    ctx.lineTo(120, 90);
+    ctx.lineTo(40, 130);
+	ctx.fillStyle = "#c25758";
+	ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#808000";
+    ctx.beginPath();
+    ctx.fillRect(235,150,10,100);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+
+
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#009d00";
+    ctx.beginPath();
+    ctx.arc(240,150,40,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    
+
+	
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#A0522D";
+    ctx.beginPath();
+	ctx.fillRect(30,200,20,50);
+	ctx.fillRect(60,200,20,50);
+	ctx.fillRect(90,200,20,50);
+	ctx.fillRect(120,200,20,50);
+	ctx.fillRect(150,200,20,50);
+	ctx.fillRect(180,200,20,50);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+	
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#A0522D";
+    ctx.beginPath();
+	
+	ctx.fillRect(50,230,10,10);
+	ctx.fillRect(80,230,10,10);
+	ctx.fillRect(110,230,10,10);
+	ctx.fillRect(140,230,10,10);
+	
+	ctx.fillRect(170,230,10,10);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+	
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#c25758";
+    ctx.beginPath();
+    ctx.fillRect(65,90,10,30);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+	
+	ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#ffff66";
+    ctx.beginPath();
+    ctx.arc(40,50,20,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+}
+</script>
+</head>
+
+<body onload="draw();">
+<canvas id="canvas" width="300" height="300">
+</canvas>
+</body>
+</html>

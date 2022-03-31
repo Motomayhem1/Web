@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script>
+			function draw() {
+			var canvas = document.getElementById('canvas');
+			var ctx = canvas.getContext('2d');
+			ctx.clearRect(0,0,10000,10000);
+			ctx.fillStyle = document.getElementById('col').value;
+			ctx.fillRect(document.getElementById("x").value,document.getElementById("y").value,document.getElementById("wth").value,document.getElementById("hht").value);
+			}
+			</script>
+	</head>
+	<body>
+	
+	<label> Введите координаты фигуры по оси Х:</label>
+	<input type="number" id = "x" value='0' step='10'>
+	<br>
+	<br>
+	<label> Введите координаты фигуры по оси Y:</label>
+	<input type="number" id = "y" value='0' step='10'>
+	<br>
+	<br>
+	
+	<label> Введите ширину фигуры:</label>
+	<input type="number" id = "wth" value='75' step='10'>
+	<br>
+	<br>
+	<label> Введите высоту фигуры:</label>
+	<input type="number" id = "hht" value='75' step='10'>
+	<br>
+	<br>
+	
+	
+	<select id = "col">
+    <optgroup label="Выберите цвет">
+	 <option value="#ea8be6">Фиолетовый</option>
+     <option value="Green">Зеленый</option>
+     <option value="Gray">Серый</option>
+     <option value="#ff1200">Красный</option>
+	 <option value="#03f7f9">Голубой</option>
+	
+    </optgroup>
+	</select>
+	<br>
+	<br>
+	<input type = "button" value="Создать" onclick ="draw();">
+	<br>
+	<br>
+	
+		<canvas id="canvas" width="800" height="800">
+		</canvas>
+	</body>
+</html>
